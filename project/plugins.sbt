@@ -4,6 +4,7 @@ addSbtPlugin("com.jsuereth" % "sbt-pgp" % "1.1.2")
 libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % sbtVersion.value
 addSbtPlugin("org.scala-native" % "sbt-scala-native" % "0.3.9")
 unmanagedSourceDirectories in Compile += baseDirectory.value.getParentFile / "src" / "main" / "scala"
+libraryDependencies += scalaOrganization.value % "scala-compiler" % scalaVersion.value
 
 scalacOptions ++= (
   "-deprecation" ::
